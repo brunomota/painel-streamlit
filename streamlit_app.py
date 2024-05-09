@@ -539,7 +539,7 @@ st.markdown('**Ano Selecionado:** '+ fAno)
 
 
 
-TAB_VALOR_ENQ, TAB_TOP20, TAB_MUN, B, C, D , MAPA= \
+TAB_VALOR_ENQ, TAB_TOP20, TAB_MUN, B, C, D = \
     st.tabs(["Valores do Enquadramento Social",
              "Top 20 Cidades",
              "Municípios com Maiores Diferenças Anuais",
@@ -610,8 +610,7 @@ with C:
 with D:
     st.session_state["selected_tab"] = "Mapa de Aproprição por Municípios"
     st.altair_chart(altair_map)
-with MAPA:
-    altair_map	
+
 
 
 
