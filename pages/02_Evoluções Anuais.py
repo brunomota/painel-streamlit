@@ -172,14 +172,14 @@ label_mun = alt.selection_single(
     empty='none'     # empty selection includes no data points
 )
 
-lst_municipios = df_filtrado['nome_municipio'].unique()
+lst_municipios = sorted(df_filtrado['nome_municipio'].unique())
 
 primeiro_municipio = lst_municipios[0]
 
 
 min_value = min(df_filtrado['Perc_Cadastros'])
 max_value = max(df_filtrado['Perc_Cadastros'])
-count_mun_20 = lst_municipios.shape[0]
+count_mun_20 = len(lst_municipios)
 
 # Criar o menu suspenso
 input_dropdown_mun = alt.binding_select(options=lst_municipios, name=f"Município:" )
