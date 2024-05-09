@@ -1,4 +1,4 @@
-pip install gdown
+!pip install gdown
 
 
 import altair as alt
