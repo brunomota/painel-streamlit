@@ -67,7 +67,7 @@ grafico_mapa = alt.Chart(geometry).mark_geoshape(
     strokeWidth=0.1
 ).encode(
     color=alt.Color('Perc_Cadastros:Q', title='Percentual',
-                    scale=alt.Scale(type='linear', scheme='blueorange')),
+                    scale=alt.Scale(domain=[0, 100], scheme='blueorange')),
      tooltip=[
          alt.Tooltip('properties.NOME:N', title='Município: '),
          alt.Tooltip('Perc_Cadastros:Q', title='% de Cadastros: '),
